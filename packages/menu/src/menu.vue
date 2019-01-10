@@ -154,12 +154,11 @@
     },
     methods: {
       updateActiveIndex(val) {
-        const item = this.items[val] || this.items[this.activeIndex] || this.items[this.defaultActive];
+        this.activeIndex = null;
+        const item = this.items[val] || this.items[this.defaultActive];
         if (item) {
           this.activeIndex = item.index;
           this.initOpenedMenu();
-        } else {
-          this.activeIndex = null;
         }
       },
 
